@@ -1,5 +1,5 @@
 <p align="center">
-    <img width= "240" src="https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/master/src/main/resources/static/image/calculator.png"/>
+    <img width= "240" src="https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/calculator.png"/>
 </div>
 
 <h1 align="center">prachijulka-calc-test-api</h1>
@@ -13,8 +13,7 @@ This API is build on Java framework. It can be used to calculate any size of int
 - Expression's result number type can be identified as Positive, Negative, Whole numbers, Natural numbers and Prime numbers.
 
 ## :wrench: Build Status 
-The status of build status will remain failing as the initial build that was created for testing purpose were failed. 
-[![Test Status](https://circleci.com/gh/PrachiJulka/prachijulka-calc-test-api.svg?branch=de&circle-token=d55c8481528fc81ba6fab4dfd3da6b4607f3fe52&style=shield)](https://circleci.com/gh/PrachiJulka/prachijulka-calc-test-api?branch=de&circle-token=d55c8481528fc81ba6fab4dfd3da6b4607f3fe52&style=shield)
+[![Test Status](https://circleci.com/gh/PrachiJulka/prachijulka-calc-test-api.svg?style=shield)](https://circleci.com/gh/PrachiJulka/prachijulka-calc-test-api?style=shield)
 
 ## :rocket: Tech/framework used
 - Locust 1.4.1 : For load testing
@@ -49,7 +48,7 @@ Unit Testing is implemented using Junit. To run the unit tests one can run the f
 `./gradlew test` <br/>
 After running the above command you will see the following result.<br/>
 
-![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/master/src/main/resources/static/image/UnitTest.png)
+![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/UnitTest.png)
 
 ### Integration Testing [![IntegrationTest: Report](https://img.shields.io/badge/Integration%20Test-Report-green.svg)](https://prachijulka.github.io/prachijulka-calc-test-api/src/main/resources/templates/test-report/integrationTest/index.html)
 
@@ -57,7 +56,7 @@ Integration Testing is implemented using Junit. To run the integration tests you
 `./gradlew integrationTest` <br/>
 After running the above command you will see the following result.<br/>
 
-![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/master/src/main/resources/static/image/IntegrationTest.png)
+![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/IntegrationTest.png)
 
 ### Load Testing [![LoadTest: Report](https://img.shields.io/badge/Load%20Test-Report-green.svg)](https://prachijulka.github.io/prachijulka-calc-test-api/src/main/resources/templates/locust-report/report_1607175264.055484.html)
 Load Testing is implemented using Locust. To run the Locust you need to install locust using command <br/>
@@ -70,7 +69,7 @@ After installing locust run master, to run master you need to run the following 
 
 After running the above command execute LoustMain file <br/>
 
-![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/master/src/main/resources/static/image/LocustTest.png)
+![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/LocustTest.png)
 
 After that, you can run the Locust Java slave using this command <br/>
 
@@ -133,11 +132,11 @@ Following status codes are returned in this api.
 ## :memo: How to use ?
 To use this application via UI one can run the application and go on http://localhost:8080/.
 
-![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/master/src/main/resources/static/image/UI.png)
+![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/UI.png)
 
 Write expression on the input box and click on submit button.You will see the following result.
 
-![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/master/src/main/resources/static/image/UIresult.png)
+![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/UIresult.png)
 
 To access rest api call use following url
 
