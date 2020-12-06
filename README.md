@@ -42,6 +42,8 @@ To use this application in developer mode. There is a need of an IDE and for dev
 
 ## :test_tube: Tests
 
+**Note:** _The individual test reports can be accessible by clicking badge that is adjacent to their respective heading heading_ 
+
 ### Unit Testing [![UnitTest: Report](https://img.shields.io/badge/Unit%20Test-Report-green.svg)](https://prachijulka.github.io/prachijulka-calc-test-api/src/main/resources/templates/test-report/test/index.html)
 
 Unit Testing is implemented using Junit. To run the unit tests one can run the following command:<br/>
