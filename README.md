@@ -58,7 +58,7 @@ After running the above command you will see the following result.<br/>
 
 ![picture](https://github.com/PrachiJulka/prachijulka-calc-test-api/blob/main/src/main/resources/static/image/IntegrationTest.png)
 
-### Load Testing [![LoadTest: Report](https://img.shields.io/badge/Load%20Test-Report-green.svg)](https://prachijulka.github.io/prachijulka-calc-test-api/src/main/resources/templates/locust-report/report_1607175264.055484.html)
+### Load Testing [![LoadTest: Report](https://img.shields.io/badge/Load%20Test-Report-green.svg)](https://prachijulka.github.io/prachijulka-calc-test-api/src/main/resources/templates/locustReport/report_1607175264.055484.html)
 Load Testing is implemented using Locust. To run the Locust you need to install locust using command <br/>
 
 `pip3 install locust` </br>
