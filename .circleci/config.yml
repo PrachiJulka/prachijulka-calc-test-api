@@ -1,0 +1,78 @@
+# Java Gradle CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:8-jdk
+
+    working_directory: ~/prachijulka-calc-test-api
+
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "build.gradle" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: gradle dependencies
+
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: v1-dependencies-{{ checksum "build.gradle" }}
+
+      # run tests!
+      - run: ./gradlew clean test
+
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: ~/junit
+
+      - run: ./gradlew integrationTest
+
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+
+
+      - setup_remote_docker
+      # This should go into custom primary image, here's only for the sake of explanation
+
+      - run:
+          name: Build Docker Image
+          command: ./gradlew build -Pprod buildDocker
+      - run:
+          name: "ChangeName and push"
+          command: |
+            docker login --username $DOCKER_USERNAME --password $DOCKER_PASS
+            docker tag com.cal.test.api/prachijulka-calc-test-api:0.0.1-SNAPSHOT prachijulka/xite:latest
+            docker push prachijulka/xite:latest
+            docker pull prachijulka/xite:latest
+
+
+
+    
+ 
